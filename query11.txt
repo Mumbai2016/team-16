@@ -1,0 +1,1 @@
+insert into tbl_name values ('DCC-LMSP1-2013-14-068','Kulandai','DDA','M','22','A12','30-Dec-15','2016-30-6','NOT REACHABLE','-','-','-','422424244');
