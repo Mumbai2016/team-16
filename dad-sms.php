@@ -10,7 +10,8 @@ $post_data = array(
  // Your exotel token - Get it from here: http://my.exotel.in/Exotel/settings/site#api-settings
 $exotel_sid = "test555"; // Your Exotel SID - Get it from here: http://my.exotel.in/Exotel/settings/site#api-settings
 $exotel_token = "69affb784da49df78c21d2a14dd6908b758a9255"; // Your exotel token - Get it from here: http://my.exotel.in/Exotel/settings/site#api-settings
- 
+ if(date_diff($start_date,$`last tracking date`)>90)
+ {
 $url = "https://".$exotel_sid.":".$exotel_token."@twilix.exotel.in/v1/Accounts/".$exotel_sid."/Sms/send";
  
 $ch = curl_init();
@@ -27,6 +28,6 @@ $error = curl_error($ch);
 $http_code = curl_getinfo($ch ,CURLINFO_HTTP_CODE);
  
 curl_close($ch);
- 
+ }
 //print "Response = ".print_r($http_result);
 ?>

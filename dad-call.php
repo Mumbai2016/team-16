@@ -1,4 +1,5 @@
 <?php
+
 $post_data = array(
     'From' => "09773475171",
     'To' => "9773475171",
@@ -8,7 +9,8 @@ $post_data = array(
     'CallType' => "trans"
     
 );
- 
+ if(date_diff($start_date,$`last tracking date`)>90)
+ {
 $exotel_sid = "test555"; // Your Exotel SID - Get it here: http://my.exotel.in/Exotel/settings/site#exotel-settings
 $exotel_token = "69affb784da49df78c21d2a14dd6908b758a9255"; // Your exotel token - Get it here: http://my.exotel.in/Exotel/settings/site#exotel-settings
  
@@ -28,6 +30,6 @@ $error = curl_error($ch);
 $http_code = curl_getinfo($ch ,CURLINFO_HTTP_CODE);
  
 curl_close($ch);
- 
+ }
 //print "Response = ".print_r($http_result);
 ?>
