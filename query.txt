@@ -1,0 +1,1 @@
+SELECT Age,Count(Age) As `NO` FROM tbl_name GROUP BY Age

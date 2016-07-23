@@ -11,7 +11,7 @@
         }
 
     //fetch table rows from mysql db
-    $sql = "select * from tbl_name";
+     $sql = "SELECT Age,Count(Age) As `NO` FROM tbl_name GROUP BY Age";
     $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
     //create an array
     $emparray = array();
