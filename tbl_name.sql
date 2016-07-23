@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 23, 2016 at 09:45 PM
+-- Generation Time: Jul 23, 2016 at 11:27 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.5.35
 
@@ -1364,7 +1364,15 @@ INSERT INTO `tbl_name` (`CC1 Unique ID#`, `First Name`, `Last Name`, `Gender`, `
 ('DCC-LMSP1-2013-14-706', 'Vathsala', 'R', 'F', '21', 'J14', '30-Jun-15', 'Not Reachable', '', '', '', NULL, NULL),
 ('DCC-LMSP1-2013-14-703', 'Vignesh', 'S', 'M', '18', 'J14', '30-Jun-15', 'Graduate/Degree', '', '', '', NULL, NULL),
 ('DCC-LMSP1-2013-14-699', 'Vishal', 'V', 'M', '20', 'J14', '30-Jun-15', 'Senior Secondary/PUC', '', '', '', NULL, NULL),
-('DCC-LMSP1-2013-14-702', 'Yamini', 'V', 'F', '18', 'J14', '30-Jun-15', 'Not Reachable', '', '', '', NULL, NULL);
+('DCC-LMSP1-2013-14-702', 'Yamini', 'V', 'F', '18', 'J14', '30-Jun-15', 'Not Reachable', '', '', '', NULL, NULL),
+(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1996-08-08'),
+('DCC-LMSP1-2013-14-068', 'Kulandai', 'DDA', 'M', '22', 'A12', '30-Dec-15', '2016-30-6', 'NOT REACHA', '-', '-', 0, '0000-00-00'),
+('DCC-LMSP1-2013-14-058', 'Kulandai', 'DDA', 'M', '22', 'A12', '30-Dec-15', '2016-30-6', 'NOT REACHA', '-', '-', 0, '0000-00-00'),
+('DCC-LMSP1-2013-14-68', 'Kulandai', 'DDA', 'M', '22', 'A12', '30-Dec-15', '2016-30-6', 'NOT REACHA', '-', '-', 0, '0000-00-00'),
+('DCC-LMSP1-2013-14-067', 'Kulandai', 'DDA', 'M', '22', 'A12', '30-Dec-15', '2016-30-6', 'NOT REACHA', '-', '-', 0, '0000-00-00'),
+('DCC-LMSP1-2013-14-067', 'Kulandai', 'DDA', 'F', '12', 'A12', '30-Dec-15', '2016-30-6', 'NOT REACHA', '-', '-', 0, '0000-00-00'),
+('DCC-LMSP1-2013-14-075', 'Kulandai', 'DDA', 'M', '21', 'A12', '30-Dec-14', '2016-30-16', 'NOT REACHA', '-', '-', 0, '0000-00-00'),
+('DCC-LMSP1-2013-14-028', 'Kulandai', 'DDA', 'M', '22', 'A12', '30-Dec-08', '2016-30-16', 'NOT REACHA', '-', '-', 0, '0000-00-00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
