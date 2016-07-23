@@ -1,0 +1,27 @@
+#nav{
+	background-color: red;
+	text-align:center;
+}
+
+.item{
+    height:25px;
+    color:gray;
+    font-family:sans-serif;
+    text-align:center;
+}
+
+#title{
+    color:gray;
+}
+.food-description{
+    border:1px solid black;
+    background:gray;
+    color:white;
+    font:10px;
+    margin-bottom:20px;
+    padding:10px;
+}
+
+header{
+font-size:1.2em;
+}
