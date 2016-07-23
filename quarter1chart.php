@@ -2,7 +2,7 @@
 <head>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <title>Age Tracker</title>
+    <title>Quarter Tracker</title>
 </head>
 <body onLoad="filloption();">
 <?php
@@ -18,13 +18,12 @@ if ($selected->connect_error) {
             die("Connection failed: " . $selected->connect_error);
         }
 //execute query
-$sql = "SELECT Age,Count(Age) As `No` FROM tbl_name GROUP BY Age"; /* WHERE YEAR(STR_TO_DATE(`Last Tracking date`, "%d-%M-%yy")) 
-BETWEEN $start AND $end";*/
+$sql =  "SELECT `1 Quarter 2015-16` As Quarter1,Count(`1 Quarter 2015-16`) As `No` FROM tbl_name GROUP BY `1 Quarter 2015-16`";
     $result = mysqli_query($selected, $sql) or die("Error in Selecting " . mysqli_error($selected));
 //fetch data
 $entry="";
 while ($row = mysqli_fetch_array($result,MYSQLI_BOTH)) {
-    $entry .= "['".$row{'Age'}."',".$row{'No'}."],";
+    $entry .= "['".$row{'Quarter1'}."',".$row{'No'}."],";
 }
 //close the connection
 mysqli_close($selected);
@@ -36,11 +35,11 @@ var options="";
     google.setOnLoadCallback(drawChart);
 	    function drawChart() {
        data = google.visualization.arrayToDataTable([
-        ['Age','No'],
+        ['Quarter1','No of enrollments'],
         <?php echo $entry ?>
     ]);
        options = {
-            title: 'Age Tracker',
+            title: 'Quarter1 Tracker',
             curveType: 'function',
             legend: { position: 'bottom' }
         };
@@ -89,14 +88,13 @@ Year Range:-
 </select>
 <select id="end" name="end">
 </select><BR/><BR/>
-Chart Type:- <select id="charttype" name="charttype">
+Chart Type:- <select id="charttype" name="charttype" onChange="selection()">
 <option>Bar Chart</option>
 <option>Line Chart</option>
 <option>Pie Chart</option>
 <option>Area Chart</option>
 <option>Column Chart</option>
 </select><BR/><BR/>
-<input type="button" id="refresh" value="GO" onClick="selection()">
 
 
 <div id="chart_div" style="width: 100%; height: 500px;"></div>
