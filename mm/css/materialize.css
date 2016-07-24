@@ -2494,9 +2494,6 @@ button {
  * Correct `select` style inheritance in Firefox.
  */
 button,
-select {
-  text-transform: none;
-}
 
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -3389,16 +3386,6 @@ nav ul a span.badge {
 .right {
   float: right !important;
 }
-
-.no-select, input[type=range],
-input[type=range] + .thumb {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .circle {
   border-radius: 50%;
 }
@@ -6315,9 +6302,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 
 /* Select Field
    ========================================================================== */
-select {
-  display: none;
-}
+
 
 select.browser-default {
   display: block;
@@ -6364,9 +6349,7 @@ select {
   font-size: 10px;
 }
 
-.select-wrapper span.caret.disabled {
-  color: rgba(0, 0, 0, 0.26);
-}
+
 
 .select-wrapper + label {
   position: absolute;
@@ -6374,31 +6357,10 @@ select {
   font-size: 0.8rem;
 }
 
-select:disabled {
-  color: rgba(0, 0, 0, 0.3);
-}
 
-.select-wrapper input.select-dropdown:disabled {
-  color: rgba(0, 0, 0, 0.3);
-  cursor: default;
-  -webkit-user-select: none;
-  /* webkit (safari, chrome) browsers */
-  -moz-user-select: none;
-  /* mozilla browsers */
-  -ms-user-select: none;
-  /* IE10+ */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
 
 .select-wrapper i {
   color: rgba(0, 0, 0, 0.3);
-}
-
-.select-dropdown li.disabled,
-.select-dropdown li.disabled > span,
-.select-dropdown li.optgroup {
-  color: rgba(0, 0, 0, 0.3);
-  background-color: transparent;
 }
 
 .prefix ~ .select-wrapper {

@@ -4,6 +4,25 @@
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <title>Quarter Tracker</title>
 </head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="mm/css/materialize.css">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="mm/js/materialize.min.js"></script>
+  <script src="mm/js/materialize.js"></script>
+  <style type="text/css">
+    #coo{
+      background-color: #67AECA;
+    }
+  </style>
+
+
+<!-- footer-->
+  <link rel="stylesheet" href="mm/css/demo.css">
+  <link rel="stylesheet" href="mm/css/footer-distributed-with-address-and-phones.css"> 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 <body onLoad="filloption();">
 <?php
 $servername = "localhost";
@@ -83,21 +102,6 @@ var chart1=document.getElementById("charttype").value;
 }
 
 </script>
-Year Range:-
-<select id="start" name="start">
-</select>
-<select id="end" name="end">
-</select><BR/><BR/>
-Chart Type:- <select id="charttype" name="charttype" onChange="selection()">
-<option>Bar Chart</option>
-<option>Line Chart</option>
-<option>Pie Chart</option>
-<option>Area Chart</option>
-<option>Column Chart</option>
-</select><BR/><BR/>
-
-
-<div id="chart_div" style="width: 100%; height: 500px;"></div>
 
 <script type="text/javascript">
 	
@@ -123,5 +127,100 @@ function filloption()
 	}
 }
 </script>
+<nav id="coo">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"><img src="logo-header.png" class="hide-on-small-only hide-on-med-only" width="40%" height="40%"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+       <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="badges.html">Search Student Details</a></li>
+        <li><a href="collapsible.html">Add Student Details</a></li>
+        <li><a href="mobile.html">Add Event</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="badges.html">Search Student Details</a></li>
+        <li><a href="collapsible.html">Add Student Details</a></li>
+        <li><a href="mobile.html">Add Event</a></li>>
+      </ul>
+    </div>
+  </nav>
+
+  Year Range:-
+<select id="start" name="start">
+</select>
+<select id="end" name="end">
+</select><BR/><BR/>
+Chart Type:- <select id="charttype" name="charttype" onChange="selection()">
+<option>Bar Chart</option>
+<option>Line Chart</option>
+<option>Pie Chart</option>
+<option>Area Chart</option>
+<option>Column Chart</option>
+</select><BR/><BR/>
+
+
+<div id="chart_div" style="width: 100%; height: 500px;"></div>
+
+<footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>Dream A<span>Dream</span></h3>
+
+        <p class="footer-links">
+      <a href="http://dreamadream.org/">Home</a>
+        </p>
+
+        <p class="footer-company-name">DreamADream &copy; 2015</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>No. 398/E, 17th Cross</span> 3rd Block, Bangalore - 560011, India</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+91 8040951084</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:info@dreamadream.org">info@dreamadream.org
+ 
+</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          We have been working with young people from vulnerable backgrounds since 1999. Ours is an entirely collaborative approach with 60 partners, 3000 volunteers, impacting over 60,000 young people each year
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="http://dreamadream.org/"><i class="fa fa-facebook"></i></a>
+          <a href="http://dreamadream.org/"><i class="fa fa-twitter"></i></a>
+          <a href="http://dreamadream.org/"><i class="fa fa-linkedin"></i></a>
+          <a href="http://dreamadream.org/"><i class="fa fa-github"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+<script>
+  $( document ).ready(function(){
+    $(".button-collapse").sideNav();});
+	
+ 
+  </script>
+
 </body>
 </html>

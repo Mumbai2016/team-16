@@ -1,16 +1,19 @@
 <html>
 <head>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+   <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <title>Gender Tracker</title>
-</head>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+ <link rel="stylesheet" href="mm/css/demo.css">
+  <link rel="stylesheet" href="mm/css/footer-distributed-with-address-and-phones.css"> 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+  
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <link rel="stylesheet" type="text/css" href="mm/css/materialize.css">
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="mm/js/materialize.min.js"></script>
-  <script src="mm/js/materialize.js"></script>
+    <title>Age Tracker</title>
+</head>
+
   <style type="text/css">
     #coo{
       background-color: #67AECA;
@@ -37,12 +40,13 @@ if ($selected->connect_error) {
             die("Connection failed: " . $selected->connect_error);
         }
 //execute query
-$sql = "SELECT Gender,Count(Gender) As `No` FROM tbl_name GROUP BY Gender";
+$sql = "SELECT Age,Count(Age) As `No` FROM tbl_name GROUP BY Age"; /* WHERE YEAR(STR_TO_DATE(`Last Tracking date`, "%d-%M-%yy")) 
+BETWEEN $start AND $end";*/
     $result = mysqli_query($selected, $sql) or die("Error in Selecting " . mysqli_error($selected));
 //fetch data
 $entry="";
 while ($row = mysqli_fetch_array($result,MYSQLI_BOTH)) {
-    $entry .= "['".$row{'Gender'}."',".$row{'No'}."],";
+    $entry .= "['".$row{'Age'}."',".$row{'No'}."],";
 }
 //close the connection
 mysqli_close($selected);
@@ -54,11 +58,11 @@ var options="";
     google.setOnLoadCallback(drawChart);
 	    function drawChart() {
        data = google.visualization.arrayToDataTable([
-        ['Gender','No of Enrollments'],
+        ['Age','No of Enrollments'],
         <?php echo $entry ?>
     ]);
        options = {
-            title: 'Gender Tracker',
+            title: 'Age Tracker',
             curveType: 'function',
             legend: { position: 'bottom' }
         };
@@ -103,9 +107,6 @@ var chart1=document.getElementById("charttype").value;
 </script>
 
 
-
-
-
 <script type="text/javascript">
 	
 
@@ -130,12 +131,13 @@ function filloption()
 	}
 }
 </script>
+
 <nav id="coo">
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo"><img src="logo-header.png" class="hide-on-small-only hide-on-med-only" width="40%" height="40%"></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="dashboard.html">Dashboard</a></li>
+         <li><a href="dashboard.html">Dashboard</a></li>
         <li><a href="badges.html">Search Student Details</a></li>
         <li><a href="collapsible.html">Add Student Details</a></li>
         <li><a href="mobile.html">Add Event</a></li>
@@ -148,7 +150,6 @@ function filloption()
       </ul>
     </div>
   </nav>
-
 
   Year Range:-
 <select id="start" name="start">
@@ -225,7 +226,5 @@ Chart Type:- <select id="charttype" name="charttype" onChange="selection()">
 	
  
   </script>
-
-
 </body>
 </html>
